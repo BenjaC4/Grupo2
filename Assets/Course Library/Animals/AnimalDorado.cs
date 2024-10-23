@@ -11,21 +11,27 @@ public class AnimalDorado : MonoBehaviour
 
 
     private Rigidbody2D rb;
-    
+    private Establo est;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        est = Object.FindAnyObjectByType<Establo>(); 
+
+    }
+    void Update(){
         AparecerAnimalDorado();
-        
     }
 
 
     public void AparecerAnimalDorado()
     {
-        Debug.Log("A aparecido el animal dorado");
-        transform.position = puntoDeAparicion.position;
-        haAparecido = true;
+        if(est.maxAnimales == est. totalAnimales){
+
+            Debug.Log("A aparecido el animal dorado");
+            transform.position = puntoDeAparicion.position;
+            haAparecido = true;
+        }
     }
 
 
