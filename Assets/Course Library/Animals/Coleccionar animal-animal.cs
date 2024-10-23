@@ -8,7 +8,7 @@ private Establo est;
 
 void Start()
 {
-    est = Object.FindAnyObjectByType<Establo>(); 
+     est = Object.FindAnyObjectByType<Establo>();
 }
 
 private void OnCollisionEnter2D(Collision2D colision)
