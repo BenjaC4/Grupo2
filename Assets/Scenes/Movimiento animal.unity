@@ -766,7 +766,7 @@ Canvas:
   serializedVersion: 3
   m_RenderMode: 1
   m_Camera: {fileID: 2047236080}
-  m_PlaneDistance: 100
+  m_PlaneDistance: 1
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
@@ -856,8 +856,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9ef3f9d73b5c664389bd91eb7d44b4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidadCaminar: 5
-  velocidadCorrer: 10
+  velocidadCaminar: 2.5
+  velocidadCorrer: 5
 --- !u!61 &541893863
 BoxCollider2D:
   m_ObjectHideFlags: 0
