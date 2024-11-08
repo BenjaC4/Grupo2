@@ -6,17 +6,22 @@ public class Cronometro : MonoBehaviour
 {
     private float tiempo; 
     private TextMeshProUGUI textMesh;
+    private Establo est;
+    private Coroutine tiempoC;
 
     private void Start()
     {
 
         textMesh = GetComponent<TextMeshProUGUI>();
-
-       
+        est = Object.FindAnyObjectByType<Establo>(); 
         tiempo = 0;
+        tiempoC = StartCoroutine(ContarTiempo());
+    }
+    private void Update(){
+        if(est.maxAnimales == est. totalAnimales){
+           StopCoroutine(tiempoC);
 
-
-        StartCoroutine(ContarTiempo());
+        }
     }
 
     private IEnumerator ContarTiempo()

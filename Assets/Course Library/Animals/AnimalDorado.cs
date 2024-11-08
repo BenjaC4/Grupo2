@@ -20,7 +20,9 @@ public class AnimalDorado : MonoBehaviour
 
     }
     void Update(){
+        if (haAparecido == false){
         AparecerAnimalDorado();
+        }
     }
 
 
