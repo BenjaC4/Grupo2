@@ -12,7 +12,7 @@ public class Puntodevista : MonoBehaviour
 
     private CinemachineCamera[] cameras;
     private int CamaraActual = 0;
-    public float hudDistance = 15f;
+    public float hudDistance = 10f;
 
     void Start()
     {
@@ -22,8 +22,8 @@ public class Puntodevista : MonoBehaviour
         //Estas camaras deben ser seleccionadadas desde el editor de Unity
         cameras = new CinemachineCamera[] { camIsometric, camTopView, camIsometricZoom };
         
-        SetActiveCamera(0);
-        UpdateHUDCamera(); 
+        CambioCamara(0);
+        FijarHUDCamera(); 
     }
 
     void Update()
@@ -33,12 +33,12 @@ public class Puntodevista : MonoBehaviour
         {
             //Recorre la lista de cameras
             CamaraActual = (CamaraActual + 1) % cameras.Length;
-            SetActiveCamera(CamaraActual);
-            UpdateHUDCamera(); 
+            CambioCamara(CamaraActual);
+            FijarHUDCamera(); 
         }
     }
 
-    void SetActiveCamera(int n)
+    void CambioCamara(int n)
     {
         //Cambia las prioridades de las camaras y asi pone la seleccionada a la vista
         foreach (var cam in cameras)
@@ -48,7 +48,7 @@ public class Puntodevista : MonoBehaviour
         cameras[n].Priority = 1;
     }
 
-    void UpdateHUDCamera()
+    void FijarHUDCamera()
     {
 
         if (hud != null)
