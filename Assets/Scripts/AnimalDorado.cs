@@ -6,7 +6,6 @@ public class AnimalDorado : MonoBehaviour
 {
     public Transform puntoDeAparicion;
     public Transform establo;
-    public LayerMask capaObstaculos;
     private bool haAparecido = false;
 
 
