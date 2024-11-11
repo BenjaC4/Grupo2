@@ -63,4 +63,4 @@ public class MovimientoPersonajeSecundario2D : MonoBehaviour
         estaPausado = false;
     }
 }
-
+//
