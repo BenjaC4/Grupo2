@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class CrearAnimal : MonoBehaviour
 {
-    public Transform[] puntosDeAparicion; // Puntos donde aparecerán los animales
+    public Transform[] puntosDeAparicion; 
     public LayerMask capaObstaculos;
     public int nAnimales;
     private int n = 0;
-    public GameObject[] prefabsDeAnimales; // Array de prefabs de animales
+    public GameObject[] prefabsDeAnimales; 
 
     void Start()
     {
@@ -32,12 +32,11 @@ public class CrearAnimal : MonoBehaviour
         Collider2D colision = Physics2D.OverlapCircle(puntoDeAparicion.position, 0.5f, capaObstaculos);
         if (colision == null)
         {
-            // Instancia el animal en la posición aleatoria seleccionada
+        // Instancia el animal en la posición aleatoria seleccionada
             Instantiate(prefabSeleccionado, puntoDeAparicion.position, Quaternion.identity);
         }
         else
         {
-            // Si hay un obstáculo, puedes intentar buscar otro punto o manejarlo de otra manera
             Debug.Log("Punto de aparición bloqueado por un obstáculo.");
         }
     }
