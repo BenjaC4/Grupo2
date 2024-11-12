@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Limite
   - Establo
+  - item
+  - Jugador
+  - Item
+  - Fruta
   layers:
   - Default
   - TransparentFX
