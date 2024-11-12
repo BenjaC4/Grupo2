@@ -34,7 +34,7 @@ public class Animal : MonoBehaviour
 
     public void Empujar(Vector2 direccionEmpuje)
     {
-        if (puedeSerEmpujado && jugador != null)
+        if (puedeSerEmpujado && jugador != null && jugador.CompareTag("Jugador"))
         {
            
             float velocidadJugador = jugador.VelocidadActual;
