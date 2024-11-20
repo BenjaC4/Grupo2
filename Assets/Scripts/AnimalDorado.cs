@@ -27,7 +27,7 @@ public class AnimalDorado : MonoBehaviour
 
     public void AparecerAnimalDorado()
     {
-        if(est.maxAnimales == est. totalAnimales){
+        if(est.maxAnimales-1 == est. totalAnimales){
 
             Debug.Log("A aparecido el animal dorado");
             transform.position = puntoDeAparicion.position;
