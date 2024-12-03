@@ -1,11 +1,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UIElements.Experimental;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instancia { get; private set; }
-    public int monedas = 100; // Monedas iniciales del jugador
 
     private Dictionary<GameObject, Vector2> posicionesIniciales = new Dictionary<GameObject, Vector2>();
     private int nivelActual = 1;
@@ -48,41 +48,38 @@ public class GameManager : MonoBehaviour
 
     public bool ReiniciarObjeto(GameObject obj)
     {
+        AnimalDorado animalDorado = obj.GetComponent<AnimalDorado>();
+        if (animalDorado != null)
+        {
+            animalDorado.transform.position = animalDorado.puntoDeAparicion.position;
+            return true;
+        }
+
         if (posicionesIniciales.ContainsKey(obj))
         {
             obj.transform.position = posicionesIniciales[obj];
             return true;
         }
+
         return false;
     }
 
     public void CargarSiguienteNivel()
     {
         posicionesIniciales.Clear();
+
         nivelActual++;
-        if (nivelActual <= 8)
+        if (nivelActual <= 8) 
         {
-            SceneManager.LoadScene($"nivel{nivelActual}");
+            string nombreSiguienteNivel = $"nivel{nivelActual}";
+            SceneManager.LoadScene(nombreSiguienteNivel);
+            Debug.Log($"Cargando {nombreSiguienteNivel}...");
         }
         else
         {
             Debug.Log("¡No hay más niveles! Juego completado.");
+            
         }
-    }
-
-    public bool RealizarCompra(int costo)
-    {
-        if (monedas >= costo)
-        {
-            monedas -= costo;
-            return true;
-        }
-        return false;
-    }
-
-    public void AñadirMonedas(int cantidad)
-    {
-        monedas += cantidad;
     }
 
     public int ObtenerNivelActual()
