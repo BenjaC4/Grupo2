@@ -568,8 +568,9 @@ GameObject:
   - component: {fileID: 5070997031598402993}
   - component: {fileID: 5078831507716426954}
   - component: {fileID: 8723504312323661457}
+  - component: {fileID: 5697104551685009571}
   m_Layer: 0
-  m_Name: Animal_Cow_Brown
+  m_Name: Animal_Cow_Brown_dorado
   m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -711,6 +712,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fuerzaEmpuje: 5
+--- !u!114 &5697104551685009571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 134694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c27cc0f88d5a949b407af4245760b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puntoDeAparicion: {fileID: 0}
+  establo: {fileID: 0}
 --- !u!1 &135088
 GameObject:
   m_ObjectHideFlags: 0

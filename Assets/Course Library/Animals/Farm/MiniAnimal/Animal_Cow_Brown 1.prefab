@@ -569,7 +569,7 @@ GameObject:
   - component: {fileID: 5078831507716426954}
   - component: {fileID: 8723504312323661457}
   m_Layer: 0
-  m_Name: Animal_Cow_Brown
+  m_Name: Animal_Cow_Brown 1
   m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -585,7 +585,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.9659258, z: -0.2588191, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.045, y: 0.045, z: 0.045}
+  m_LocalScale: {x: 0.0045, y: 0.0045, z: 0.0045}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 493360}

@@ -11,6 +11,8 @@ TagManager:
   - Item
   - Fruta
   - Animal
+  - punto_aparicion
+  - Transicion
   layers:
   - Default
   - TransparentFX
